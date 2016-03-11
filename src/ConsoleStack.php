@@ -69,6 +69,149 @@ class ConsoleStack extends CommandStack
     }
 
     /**
+     * @param string $langcode
+     * @return $this
+     */
+    public function langcode($langcode = "")
+    {
+        $this->printTaskInfo("Langcode: <info>{$langcode}</info>");
+        $this->option("langcode", escapeshellarg($langcode));
+        return $this;
+    }
+
+    /**
+     * @param string $dbType
+     * @return $this
+     */
+    public function dbType($dbType = "")
+    {
+        $this->printTaskInfo("DB Type: <info>{$dbType}</info>");
+        $this->option("db-type", escapeshellarg($dbType));
+        return $this;
+    }
+
+    /**
+     * @param string $dbFile
+     * @return $this
+     */
+    public function dbFile($dbFile = "")
+    {
+        $this->printTaskInfo("DB Host: <info>{$dbFile}</info>");
+        $this->option("db-file", escapeshellarg($dbFile));
+        return $this;
+    }
+
+    /**
+     * @param string $dbHost
+     * @return $this
+     */
+    public function dbHost($dbHost = "")
+    {
+        $this->printTaskInfo("DB Host: <info>{$dbHost}</info>");
+        return $this;
+        $this->option("db-host", escapeshellarg($dbHost));
+    }
+
+    /**
+     * @param string $dbUser
+     * @return $this
+     */
+    public function dbUser($dbUser = "")
+    {
+        $this->printTaskInfo("DB User: <info>{$dbUser}</info>");
+        $this->option("db-user", escapeshellarg($dbUser));
+        return $this;
+    }
+
+    /**
+     * @param string $dbPass
+     * @return $this
+     */
+    public function dbPass($dbPass= "")
+    {
+        $this->printTaskInfo("DB Pass: <info>{$dbPass}</info>");
+        $this->option("db-pass", escapeshellarg($dbPass));
+        return $this;
+    }
+
+    /**
+     * @param string $dbPrefix
+     * @return $this
+     */
+    public function dbPrefix($dbPrefix = "")
+    {
+        $this->printTaskInfo("DB Prefix: <info>{$dbPrefix}</info>");
+        $this->option("db-prefix", escapeshellarg($dbPrefix));
+        return $this;
+    }
+
+    /**
+     * @param string $dbPort
+     * @return $this
+     */
+    public function dbPort($dbPort = "")
+    {
+        $this->printTaskInfo("DB Port: <info>{$dbPort}</info>");
+        $this->option("db-port", escapeshellarg($dbPort));
+        return $this;
+    }
+
+    /**
+     * @param string $siteName
+     * @return $this
+     */
+    public function siteName($siteName= "")
+    {
+        $this->printTaskInfo("Site Name: <info>{$siteName}</info>");
+        $this->option("site-name", escapeshellarg($siteName));
+        return $this;
+    }
+
+    /**
+     * @param string $siteMail
+     * @return $this
+     */
+    public function siteMail($siteMail = "")
+    {
+        $this->printTaskInfo("Site Mail: <info>{$siteMail}</info>");
+        $this->option("site-mail", escapeshellarg($siteMail));
+        return $this;
+    }
+
+    /**
+     * @param string $accountName
+     * @return $this
+     */
+    public function accountName($accountName = "")
+    {
+        $this->printTaskInfo("Account Name: <info>{$accountName}</info>");
+        $this->option("account-name", escapeshellarg($accountName));
+        return $this;
+    }
+
+    /**
+     * @param string $accountMail
+     * @return $this
+     */
+    public function accountMail($accountMail = "")
+    {
+        $this->printTaskInfo("Account Mail: <info>{$accountMail}</info>");
+        $this->option("account-mail", escapeshellarg($accountMail));
+        return $this;
+    }
+
+    /**
+     * @param string $accountPass
+     * @return $this
+     */
+    public function accountPass($accountPass = "")
+    {
+        $this->printTaskInfo("Account Pass: <info>I can't tell you that it's a secret!</info>");
+        $this->option("account-pass", escapeshellarg($accountPass));
+        return $this;
+    }
+
+    /**
      * Run Console's site installer.
      * @return $this
      */
@@ -120,6 +263,4 @@ class ConsoleStack extends CommandStack
     {
         $this->pathToConsole = $pathToConsole;
     }
-
-    public function
 }
