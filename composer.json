@@ -1,17 +1,9 @@
 {
-    "name": "DustinLeblanc/robo-drupal-console",
-    "description": "Robo task provider for the Drupal Console package.",
+    "name": "pantheon-systems/robo-drupal-console",
+    "description": "Drupal Console CommandStack for Robo Task Runner",
+    "keywords": [ "cli", "pantheon", "drupal" ],
     "type": "package",
-    "autoload": {
-        "psr-4": {
-            "DustinLeblanc\\Robo\\Task\\DrupalConsole\\": "src"
-        }
-    },
-    "require": {
-        "codegyre/robo": "^0.7.1",
-        "drupal/console": "^0.10.12"
-    },
-    "license": "GPL-2.0",
+    "license": "MIT",
     "authors": [
         {
             "name": "Dustin LeBlanc",
@@ -19,6 +11,16 @@
         }
     ],
     "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Pantheon\\Robo\\Task\\DrupalConsole\\": "src"
+        }
+    },
+    "require": {
+        "php": ">=5.5.9",
+        "codegyre/robo": "^0.7.1",
+        "drupal/console": "^0.10.12"
+    },
     "require-dev": {
         "phpspec/phpspec": "^2.4"
     }

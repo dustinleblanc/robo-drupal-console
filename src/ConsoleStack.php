@@ -1,6 +1,6 @@
 <?php
 
-namespace DustinLeblanc\Robo\Task\DrupalConsole;
+namespace Pantheon\Robo\Task\DrupalConsole;
 
 use Robo\Common\CommandArguments;
 use Robo\Task\CommandStack;
