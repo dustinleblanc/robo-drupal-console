@@ -31,7 +31,40 @@ class ConsoleStack extends CommandStack
     public function drupalRootDirectory($drupalRootDirectory)
     {
         $this->printTaskInfo('Drupal root: <info>' . $drupalRootDirectory . '</info>');
-        $this->arg('--root', escapeshellarg($drupalRootDirectory));
+        $this->option('root',  escapeshellarg($drupalRootDirectory));
+        return $this;
+    }
+
+    /**
+     * @param string $format
+     * @return $this
+     */
+    public function outputFormat($format = "json")
+    {
+        $this->printTaskInfo("Output format: <info>{$format}</info>");
+        $this->option('format', escapeshellarg($format));
+        return $this;
+    }
+
+    /**
+     * @param string $uri
+     * @return $this
+     */
+    public function siteUri($uri = "")
+    {
+        $this->printTaskInfo("Site URI: <info>{$uri}</info>");
+        $this->option('uri', escapeshellarg($uri));
+        return $this;
+    }
+
+    /**
+     * @param string $target
+     * @return $this
+     */
+    public function target($target = "")
+    {
+        $this->printTaskInfo("Target: <info>{$target}</info>");
+        $this->option("target", escapeshellarg($target));
         return $this;
     }
 
@@ -87,4 +120,6 @@ class ConsoleStack extends CommandStack
     {
         $this->pathToConsole = $pathToConsole;
     }
+
+    public function
 }
