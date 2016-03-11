@@ -1,0 +1,4 @@
+suites:
+  robo_drupal_console_suite:
+    namespace: DustinLeblanc\Robo\Task\DrupalConsole
+    psr4_prefix: DustinLeblanc\Robo\Task\DrupalConsole
