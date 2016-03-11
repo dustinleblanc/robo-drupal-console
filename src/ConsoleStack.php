@@ -12,16 +12,13 @@ class ConsoleStack extends CommandStack
 {
     use CommandArguments;
 
-
-    protected $pathToConsole;
-
     /**
      * ConsoleStack constructor.
      * @param string $pathToConsole
      */
     public function __construct($pathToConsole = 'drupal')
     {
-        $this->pathToConsole = $pathToConsole;
+        $this->executable =  $pathToConsole;
     }
 
 
