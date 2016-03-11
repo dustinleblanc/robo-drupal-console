@@ -59,7 +59,7 @@ class ConsoleStack extends CommandStack
         if (is_array($command)) {
             $command = implode(' ', array_filter($command));
         }
-        return parent::exec($this->injectArguments($command, $assumeYes));
+        return parent::exec($this->injectArguments($command));
     }
 
 
